@@ -59,7 +59,7 @@ class VillagersController < ApplicationController
         redirect "/villagers/#{@villager.id}"
     end
 
-    post "/villagers/:id/delete" do
+    delete "/villagers/:id" do
         villager = current_user.villagers.find_by_id(params[:id])
 
         if villager && villager.delete
