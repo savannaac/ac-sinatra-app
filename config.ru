@@ -5,6 +5,7 @@ require_relative "./config/environment"
 #end
 
 use Rack::MethodOverride
-# use Controller
+use UsersController
+use VillagersController
 
 run ApplicationController
