@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
         if user.save && user.name != "" && user.email != ""
             session[:user_id] = user.id 
-            redirect to "/villagers"
+            redirect "/villagers"
         else 
             redirect "/signup"
         end
