@@ -5,7 +5,6 @@ class UsersController < ApplicationController
         else 
             erb :"/users/signup"
         end
-    redirect "/villagers"
     end
 
     post "/signup" do 
@@ -28,16 +27,19 @@ class UsersController < ApplicationController
     end
 
     post "/login" do
-        user = User.find_by(:name => params[:name])
+        @current_user = User.find_by(:name => params[:name], :email => params[:email])
 
-        if user && user.authenticate(params[:password])
-            session[:user_id] = user.id
+        if @current_user && @current_user.authenticate(params[:password])
+            session[:user_id] = @current_user.id
         end
-    redirect "/villagers"
     end
 
     get "/logout" do
-        session.clear
-        redirect "/"
+        if logged_in?
+            session.clear
+            redirect "/"
+        else 
+            redirect "/"
+        end
     end
 end

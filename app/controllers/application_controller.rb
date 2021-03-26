@@ -6,6 +6,8 @@ class ApplicationController < Sinatra::Base
         enable :sessions 
     end
 
+    get ("/") { erb :index }
+
     helpers do
         def current_user
             @user = User.find_by_id(session[:user_id])
@@ -15,6 +17,4 @@ class ApplicationController < Sinatra::Base
             !!current_user
         end
     end
-
-    get ("/") { erb :index }
 end

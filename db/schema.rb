@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_24_235857) do
+ActiveRecord::Schema.define(version: 2021_03_26_000053) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2021_03_24_235857) do
     t.string "species"
     t.string "birthday"
     t.string "catchphrase"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_villagers_on_user_id"
   end
 
+  add_foreign_key "villagers", "users"
 end

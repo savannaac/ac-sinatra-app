@@ -1,0 +1,66 @@
+<head>
+<style>
+    body {font-family: Arial, sans-serif}
+    form {border: 4px dotted green}
+
+    input[type=text], input[type=password] {
+        border: 1px solid gray;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 8px 0;
+        padding: 12px 20px;
+        width: 25%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+    
+    button {
+        background-color: green;
+        border: 2px solid white;
+        color: white;
+        font: arial;
+        font-size: 16px;
+        margin: 8px 0;
+        padding: 14px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    button:hover {
+       opacity: 0.9;
+    }
+
+    .image_container {\
+        border: 1px solid gray;
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+
+    image {
+        width: 35%;
+        border-radius: 50%;
+    }
+</style>
+</head>
+
+<body>
+    <center><h1>Log In</h1>
+
+    <form action="/login" method="post">
+        <div class="image_container">
+            <img src="images/login-img.png" alt="login-image">
+        </div>
+
+        <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="name" required><br>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <br><br><button type="submit"><b>Login</b></button>
+        </div>
+    </form></center>
+</body>
