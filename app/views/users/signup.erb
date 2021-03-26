@@ -1,1 +1,88 @@
-<h1>Sign Up</h1>
+<head>
+<style>
+    body {color: white; font-family: Arial, sans-serif}
+    form {
+        background-color: white; 
+        background-image: linear-gradient(white, lightpink);
+        border: 4px solid black;
+        height: 700px;
+        margin-bottom: 15px;
+        width: 500px;
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+        border: 1px solid gray;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 6px 0;
+        padding: 7px 20px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .background {
+        background-image: url("images/ac-villagers-background.jpeg");
+        background-color: white;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        overflow: hidden;
+        height: 1000px;
+    }
+
+    .container {
+        padding: 16px;
+    }
+    
+    button {
+        background-color: white;
+        border: 2px solid gray;
+        color: black;
+        font: arial;
+        font-size: 16px;
+        margin: 2px 0;
+        padding: 7px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 30%;
+    }
+
+    button:hover {
+       background-image: linear-gradient(white, aquamarine);
+       color: gray;
+    }
+
+    .image_container {
+        background-color: ;
+        border-bottom: 2px dotted gray;
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+
+    image {
+        width: 35%;
+        border-radius: 50%;
+    }
+</style>
+</head>
+
+<body>
+    <div class="background">
+    <center><h1>Sign Up</h1>
+    <h3>to get started or <a href="/login" style="color: white;">LOG IN</a><h3>
+
+    <form action="/signup" method="post">
+        <div class="image_container">
+            <img src="images/login-img.png" alt="login-image">
+        </div>
+
+        <div class="container">
+            <input type="text" placeholder="Username" name="name" required><br>
+            <input type="email" placeholder="Email" name="email" required><br>
+            <input type="password" placeholder="Password" name="password" required>
+
+            <br><br><button type="submit"><b>SIGN UP</b></button>
+        </div>
+    </form></center>
+    </div>
+</body>
