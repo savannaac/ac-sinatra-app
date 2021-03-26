@@ -50,7 +50,7 @@ class VillagersController < ApplicationController
     patch "/villagers/:id" do
         @villager = Villager.find_by_id(params[:id])
 
-        if logged_in? && @villager.user = current_user
+        if logged_in? && @villager.user == current_user
             @villager.name = params([:name])
             @villager.personality = params([:personality])
             @villager.species = params([:species])
@@ -68,8 +68,6 @@ class VillagersController < ApplicationController
         villager = current_user.villagers.find_by_id(params[:id])
 
         if villager && villager.delete
-            redirect "/villagers"
-        else
             redirect "/villagers"
         end
     end
