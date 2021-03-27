@@ -1,1 +1,117 @@
-<h1>blah blah blah</h1>
+<head>
+<style>
+    h1 { 
+        color: black;
+        font-family: arial, sans-serif; 
+        font-size: 40px;
+        padding-top: 6px;
+        text-transform: uppercase
+    } 
+
+    p {
+        color: black;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        text-align: justified;
+        width: 700px;
+    }
+
+    .banner {
+        background-color: white;
+        border-bottom: 2px solid gray;
+        height: 150px;
+        margin: 0;
+        text-align: center;
+        width: 110%;
+    }
+
+    .leaf-logo {
+        margin-right: 5px;
+        width: 75px;
+    }
+
+    .title {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .middle-section {
+        background-image: url("images/happy-villagers.jpg");
+        background-color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom: 2px solid gray;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .banner-buttons {
+        background-color: white;
+        border: 2px solid white;
+        color: black;
+        font: arial;
+        font-size: 14px;
+        margin-right: 5px;
+        margin-top: -10px; 
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100px;
+    }
+
+    .banner-buttons:hover {
+        background-color: aquamarine;
+        border: 1.5px solid black;
+        color: white;
+    }
+
+    .footer {
+        background-color: white;
+        background-image: linear-gradient(white, pink);
+        color: black;
+        display: flex;
+        flex-direction: row;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        height: 400px;
+        justify-content: center;
+        margin: 0;
+        position: fixed;
+        width: 100%;
+    }
+</style>
+</head>
+
+<body>
+    <div class="flex-row">
+        <div class="banner">
+            <div class='title'>
+                <img class='leaf-logo' src="images/kyle.png" >
+                <h1> Hi, <%= @user.name %> </h1>
+            </div>
+
+            <div class="flex-row">
+                <button id="button-demo1" class="banner-buttons"><a href="/villagers/new" style="text-decoration:none;">create</a></button>
+                <button id="button-demo2" class="banner-buttons"><a href="villagers/edit" style="text-decoration:none;">edit</a></button>
+                <button id="button-demo2" class="banner-buttons"><a href="/logout" style="text-decoration:none;">sign out</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="middle-section">
+        <h2>Maybe Stuff</h2>
+    </div>
+    
+    <div class="footer">
+        <p>Stuff Stuff</p>
+        <p>Stuff Stuff Stuff</p>
+    </div>
+</body>

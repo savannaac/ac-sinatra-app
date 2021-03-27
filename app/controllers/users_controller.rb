@@ -27,18 +27,17 @@ class UsersController < ApplicationController
     end
 
     post "/login" do
-        @current_user = User.find_by(:name => params[:name], :email => params[:email])
+        @user = User.find_by(:email => params[:email])
 
-        if @current_user && @current_user.authenticate(params[:password])
-            session[:user_id] = @current_user.id
+        if @user && @user.authenticate(params[:password])
+            session[:user_id] = @user.id
+            redirect "/villagers"
         end
     end
 
     get "/logout" do
         if logged_in?
             session.clear
-            redirect "/"
-        else 
             redirect "/"
         end
     end
