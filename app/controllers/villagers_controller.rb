@@ -64,11 +64,11 @@ class VillagersController < ApplicationController
         end
     end
 
-    delete "/villagers/:id" do
-        villager = current_user.villagers.find_by_id(params[:id])
-
-        if villager && villager.delete
+    delete "/villagers/:id/delete" do
+        @villager = Villager.find_by_id(params[:id])
+        if logged_in? && @villager.user_id == current_user.id
+                @villager.destroy
+        end        
             redirect "/villagers"
-        end
     end
 end

@@ -1,1 +1,147 @@
-Cool
+<head>
+<style>
+    h1 { 
+        color: #324a40;
+        font-family: arial, sans-serif; 
+        font-size: 50px;
+        margin-bottom: -10px;
+        padding-top: 6px;
+    } 
+
+    h2 {
+        color: #f5e79f;
+        font-family: arial, sans-serif; 
+    }
+
+    body {font-family: Arial, sans-serif}
+
+    form {
+        background-image:linear-gradient(white, #ebfff7);
+        border: 3px solid #77b59c;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        box-shadow: inset 0px 0px 15px #f5e79f;
+        -moz-box-shadow: inset 0px 0px 15px #f5e79f;
+        -webkit-box-shadow: inset 0px 0px 15px #f5e79f;
+        height: 300px;
+        margin-bottom: 50px;
+        width: 500px;
+    }
+
+    input[type=text] {
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #668c7d;
+        display: inline-block;
+        margin: 5px 0;
+        padding: 12px 20px;
+        text-align: left;
+        font-size: 12.5px;
+        width: 45%;
+    }
+
+    .background {
+        background-image: url("/images/campy-background.jpeg");
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 5px;
+        padding: 33px;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-buttons {
+        background-color: #c9ffe9;
+        border: 2px solid #7fad9b;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        box-shadow: inset -0px -1px 2px #77bfa2;
+        -moz-box-shadow: inset -0px -1px 2px #77bfa2;
+        -webkit-box-shadow: inset -0px -1px 2px #77bfa2;
+        font: arial;
+        font-size: 14px;
+        margin: 2px 2px 10px 2px;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: lowercase;
+        width: 10%;
+    }
+    
+    button {
+        background-color: #7dc9ab;
+        border: 1px solid #6cad93;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        box-shadow: -0px -1px 2px #77bfa2;
+        -moz-box-shadow:-0px -1px 2px #77bfa2;
+        -webkit-box-shadow:-0px -1px 2px #77bfa2;
+        color: #e0fff3;
+        font: arial;
+        font-size: 16px;
+        margin: 2px 0;
+        padding: 7px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 25%;
+    }
+
+    button:hover {
+       background-image: linear-gradient(#fff, #fffadb);
+       color: #74a18f;
+    }
+
+    @keyframes blink { 
+        50% { border-color: #ffcd5f; } 
+    }
+
+    .blinking-border:hover {
+        animation: blink .5s step-end infinite alternate;
+    }
+
+    .blinking-border {
+        border: 7px solid #9ae2ff;
+        height: 99vh;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="blinking-border">
+            <center><h1><%= @villager.name %></h1>
+            <h2 style="font-size: 18px;">"<%= @villager.catchphrase %>"</h2>
+
+            <div class="flex-row">
+            <button id="button1-home" class="nav-buttons"><a href="/villagers" style="color: #65a189; text-decoration:none;">home</a></button>
+                <button id="button3-logout" class="nav-buttons"><a href="/logout" style="color: #65a189; text-decoration:none;">sign out</a></button>
+            </div>
+
+            <form action="/villagers/<%= @villager.id %>" method="post">
+            <input type="hidden" id="hidden" name="_method" value="PATCH">
+                <div class="container">
+                    <input type="text" placeholder="<%= @villager.name %>" name="name"><br>
+                    <input type="text" placeholder="<%= @villager.personality %>" name="personality"><br>
+                    <input type="text" placeholder="<%= @villager.species %>" name="species"><br>
+                    <input type="text" placeholder="<%= @villager.birthday %>" name="birthday"><br>
+                    <input type="text" placeholder="<%= @villager.catchphrase %>" name="catchphrase"><br>
+
+                    <br><br><button type="submit"><b>Update</b></button>
+                </div>
+            </form></center>
+        </div>
+    </div>
+</body>
