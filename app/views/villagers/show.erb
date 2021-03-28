@@ -22,7 +22,7 @@
         box-shadow: inset 0px 0px 15px #f5e79f;
         -moz-box-shadow: inset 0px 0px 15px #f5e79f;
         -webkit-box-shadow: inset 0px 0px 15px #f5e79f;
-        height: 300px;
+        height: 400px;
         margin-bottom: 50px;
         width: 500px;
     }
@@ -126,7 +126,7 @@
 
             <div class="flex-row">
                 <button id="button1-home" class="nav-buttons"><a href="/villagers" style="color: #65a189; text-decoration:none;">home</a></button>
-                <button id="button2-edit" class="nav-buttons"><a href="/villagers/<%=@villager.id%>/edit" style="color: #65a189; text-decoration:none;">edit</a></button>
+                <button id="button2-edit" class="nav-buttons"><a href="/villagers/<%= @villager.id %>/edit" style="color: #65a189; text-decoration:none;">edit</a></button>
                 <button id="button3-logout" class="nav-buttons"><a href="/logout" style="color: #65a189; text-decoration:none;">sign out</a></button>
             </div>
 
@@ -134,9 +134,10 @@
                     <p class="content-text"><%= @villager.personality %></p><br>
                     <p class="content-text"><%= @villager.species %></p><br>
                     <p class="content-text"><%= @villager.birthday %></p><br>
+                    <p class="content-text"><%= @villager.status %></p><br>
 
                     <form action="/villagers/<%= @villager.id %>/delete" method="post">
-                    <input type="hidden" id="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_method" value="DELETE">
                     <button type="submit"><b>Delete</b></button>
                     </form>
                 </div></center>
