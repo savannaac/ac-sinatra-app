@@ -1,110 +1,16 @@
-<head>
-<style>
-    h1 { 
-        color: #24443a;
-        font-family: arial, sans-serif; 
-        font-size: 50px;
-        margin-top: 15%;
-        margin-bottom: -10px;
-        padding-top: 6px;
-    } 
-
-    h2 {
-        color: #f5b806;
-        font-family: arial, sans-serif; 
-    }
-
-    .content-container {
-        background-image:linear-gradient(white, #ebfff7);
-        border: 3px solid #54d4fc;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        box-shadow: inset 0px 0px 15px #8ce2f7;
-        -moz-box-shadow: inset 0px 0px 15px #8ce2f7;
-        -webkit-box-shadow: inset 0px 0px 15px #8ce2f7;
-        height: 300px;
-        margin-top: 25%;
-        margin-bottom: 50px;
-        width: 475px;
-    }
-
-    h3 {
-        color: #548e9c;
-        font-family: Arial, sans-serif;
-        font-size: 10px;
-        padding-top: 40px;
-        padding-right: 8px;
-        text-align: right;
-    }
-
-    .background {
-        background-image: url("images/shocked-villagers.jpeg");
-        background-position: center center;
-        background-repeat: repeat;
-        background-size: cover;
-        width: 100%;
-    }
-
-    .container {
-        margin-top: 5px;
-        padding: 33px;
-    }
-
-    .flex-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .nav-buttons {
-        background-color: #fff;
-        border: 2px solid #b951c4;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        box-shadow: inset -0px -1px 2px #f491ff;
-        -moz-box-shadow: inset -0px -1px 2px #f491ff;
-        -webkit-box-shadow: inset -0px -1px 2px #f491ff;
-        font: arial;
-        font-size: 14px;
-        margin: 2px 2px 10px 2px;
-        padding: 10px 15px;
-        text-align: center;
-        text-transform: lowercase;
-        width: 18%;
-    }
-    
-    .nav-buttons:hover {
-        background-image: linear-gradient(#e16ded, #fff);
-     }
-
-    @keyframes blink { 
-        50% { border-color: #54d4fc; } 
-    }
-
-    .blinking-border:hover {
-        animation: blink .5s step-end infinite alternate;
-    }
-
-    .blinking-border {
-        border: 7px solid #f8b5ff;
-        height: 99vh;
-    }
-</style>
-</head>
+<link rel="stylesheet" href="/stylesheets/welcome_page.css">
 
 <body>
 
-    <div class="background">
+    <div class="background" style="background-image: url('images/spring-background.jpeg');">
         <div class="blinking-border">
             <center><div class= content-container>
                 <h1>APP NAME</h1>
-                <h2 style="font-size: 18px;">DESCRIPTION</h2>
+                <h2 style="font-size: 18px;">plan your perfect island</h2>
 
                 <div class="flex-row">
-                    <button id="button1-home" class="nav-buttons"><a href="/signup" style="color: #93409c; text-decoration:none;">sign up</a></button>
-                    <button id="button3-logout" class="nav-buttons"><a href="/login" style="color: #93409c; text-decoration:none;">log in</a></button>
+                    <button id="button1-signup" class="nav-buttons"><a href="/signup" style="color: #fff; text-decoration:none;">sign up</a></button>
+                    <button id="button2-logout" class="nav-buttons"><a href="/login" style="color: #fff; text-decoration:none;">log in</a></button>
                 </div>
 
                 <h3>for mama</h3>
