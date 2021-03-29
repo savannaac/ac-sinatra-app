@@ -33,8 +33,7 @@ Open browser to `localhost:9393`
 After running the program & creating an account, 
 
 
-1. Create a villager
-  * Name is the only required field
+1. Create a villager (name is required)
 2. Choose its personality type and species from a list
 3. Fill in its birthday, catchphrase, and add a note about status 
 4. Maintain by updating or deleting villagers
