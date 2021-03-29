@@ -2,35 +2,18 @@ h1 {
     color: #ffc105;
     font-family: arial black, sans-serif; 
     font-size: 50px;
-    margin-top: 10%;
-    margin-bottom: -20px;
-    padding-top: 6px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;   
+    margin-bottom: -15px;
+    padding-top: 5px;
 } 
 
 h2 {
     color: #fff;
     font-family: arial, sans-serif; 
-    margin-right: 20px;
-}
-
-h3 {
-    color: #548e9c;
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    padding-top: 45px;
-    padding-right: 10px;
-    text-align: right;
-}
-
-.background {
-    background-position: center center;
-    background-repeat: repeat;
-    background-size: cover;
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 .content-container {
+    background-color: #fff;
     background-image:linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
                     linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
                     linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
@@ -43,17 +26,37 @@ h3 {
                     linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
                     linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
                     linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
-    border: 7px solid #8c9296;
+    border: 5px solid #8c9296;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-    box-shadow: inset 0px 0px 15px #d7ebfa;
-    -moz-box-shadow: inset 0px 0px 15px #d7ebfa7;
-    -webkit-box-shadow: inset 0px 0px 15px #d7ebfa;
-    height: 300px;
-    margin-top: 20%;
+    box-shadow: inset 0px 0px 15px #8ce2f7;
+    -moz-box-shadow: inset 0px 0px 15px #8ce2f7;
+    -webkit-box-shadow: inset 0px 0px 15px #8ce2f7;
+    height: 650px;
     margin-bottom: 50px;
     width: 475px;
+}
+
+.content-text {
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #548e9c;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 12.5px;
+    margin: 3px 0;
+    margin-left: -15px;
+    padding: 10px 20px;
+    text-align: left;
+    width: 40%;
+}
+
+.container {
+    margin-top: 5px;
+    padding: 33px;
 }
 
 .flex-row {
@@ -63,28 +66,50 @@ h3 {
 }
 
 .nav-buttons {
-    background-color: #98bfd6;
-    border: 2px solid #5c8fad;
+    background-color: #f183fc;
+    border: 2px solid #b951c4;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    box-shadow: inset -0px -1px 2px #6fadd1;
-    -moz-box-shadow: inset -0px -1px 2px #6fadd1;
-    -webkit-box-shadow: inset -0px -1px 2px #6fadd1;
+    box-shadow: inset -0px -1px 2px #d45ce0;
+    -moz-box-shadow: inset -0px -1px 2px #d45ce0;
+    -webkit-box-shadow: inset -0px -1px 2px #d45ce0;
+    font: arial;
     font-size: 14px;
     margin: 2px 2px 10px 2px;
     padding: 10px 15px;
     text-align: center;
     text-transform: lowercase;
-    width: 20%;
+    width: 10%;
 }
 
 .nav-buttons:hover {
     background-image: linear-gradient(#e16ded, #fff);
  }
 
+button {
+    background-color: #77b9c9;
+    border: 1px solid #61a7b8;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    box-shadow: -0px -1px 2px #70bccf;
+    -moz-box-shadow:-0px -1px 2px #70bccf;
+    -webkit-box-shadow:-0px -1px 2px #70bccf;
+    font: arial;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 7px 20px;
+    text-transform: lowercase;
+    width: 15%;
+}
+
+button:hover {
+   background-image: linear-gradient(#82c8d9, #fff);
+}
+
 @keyframes blink { 
-    50% { border-color: #87d9ed; } 
+    50% { border-color: #f21fac; } 
 }
 
 .blinking-border:hover {
@@ -92,6 +117,6 @@ h3 {
 }
 
 .blinking-border {
-    border: 7px solid #fcb8ed;
+    border: 7px solid #f8b5ff;
     height: 99vh;
 }

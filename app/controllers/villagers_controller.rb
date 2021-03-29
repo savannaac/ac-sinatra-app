@@ -21,7 +21,8 @@ class VillagersController < ApplicationController
     end
 
     post "/villagers" do
-        @villager = Villager.create(:name => params[:name], :personality => params[:personality], :species => params[:species], :birthday => params[:birthday], :catchphrase => params[:catchphrase])
+        villager = Villager.new(:name => params[:name], :personality => params[:personality], :species => params[:species], :birthday => params[:birthday], :catchphrase => params[:catchphrase], :status => params[:status])
+        villager.save
 
         redirect "/villagers/#{@villager.id}"
     end
@@ -51,9 +52,10 @@ class VillagersController < ApplicationController
             @villager.species = params[:species]
             @villager.birthday = params[:birthday]
             @villager.catchphrase = params[:catchphrase]
+            @villager.status = params[:status]
             @villager.save
 
-            redirect to "/villagers/#{@villager.id}"
+        redirect to "/villagers/#{@villager.id}"
     end
 
     delete "/villagers/:id/delete" do

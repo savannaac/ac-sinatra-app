@@ -1,106 +1,10 @@
-<head>
-<style>
-    h1 { 
-        color: #fff;
-        font-family: arial, sans-serif; 
-        font-size: 50px;
-        margin-bottom: -10px;
-        padding-top: 6px;
-    } 
-
-    h2 {
-        color: #000;
-        font-family: arial, sans-serif; 
-    }
-
-    body {font-family: Arial, sans-serif}
-
-    form {
-        background-image:linear-gradient(#fff, #fffadb);
-        border: 3px solid #f5b114;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        box-shadow: inset 0px 0px 15px #fcda8b;
-        -moz-box-shadow: inset 0px 0px 15px #fcda8b;
-        -webkit-box-shadow: inset 0px 0px 15px #fcda8b;
-        height: 700px;
-        margin-bottom: 50px;
-        width: 500px;
-    }
-
-    input[type=text], input[type=email], input[type=password] {
-        border: 1px solid gray;
-        box-sizing: border-box;
-        display: inline-block;
-        margin: 8px 0;
-        padding: 12px 20px;
-        text-align: center;
-        font-size: 12.5px;
-        width: 90%;
-    }
-
-    .background {
-        background-image: url("images/tent-hall-background.jpeg");
-        background-position: center center;
-        background-repeat: repeat;
-        background-size: cover;
-        width: 100%;
-    }
-
-    .container {
-        margin-top: 1px;
-        padding: 33px;
-    }
-    
-    button {
-        background-color: #f2ad0c;
-        border: 1px solid #db9a02;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        box-shadow: -0px -1px 2px #fcbc30;
-        -moz-box-shadow:-0px -1px 2px #fcbc30;
-        -webkit-box-shadow:-0px -1px 2px #fcbc30;
-        color: #fffadb;
-        font: arial;
-        font-size: 16px;
-        margin: 2px 0;
-        padding: 7px 20px;
-        text-align: center;
-        text-transform: uppercase;
-        width: 25%;
-    }
-
-    button:hover {
-       background-image: linear-gradient(#fff, #ebfff7);
-       color: gray;
-    }
-
-    .image_container {
-        text-align: center;
-        margin: 40px 0 30px 0;
-    }
-
-    @keyframes blink { 
-        50% { border-color: #ffcd5f; } 
-    }
-
-    .blinking-border:hover {
-        animation: blink .5s step-end infinite alternate;
-    }
-
-    .blinking-border {
-        border: 7px solid #fb94ff;
-    }
-</style>
-</head>
+<link rel="stylesheet" href="stylesheets/signup.css">
 
 <body>
-    <div class="background">
+    <div class="background" style="background-image: url('images/tent-hall-background.jpeg');">
         <div class="blinking-border">
             <center><h1>Sign Up</h1>
-            <h2 style="font-size: 18px;">to get started or <a href="/login" style="color: #fff; text-decoration: none;">LOG IN</a></h2>
+            <h2 style="font-size: 18px;">to get started or <a href="/login" style="color: #ffc105; text-decoration: none;">LOG IN</a></h2>
 
             <form action="/signup" method="post">
                 <div class="image_container">

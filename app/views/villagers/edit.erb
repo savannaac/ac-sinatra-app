@@ -33,7 +33,7 @@
     }
 
     input[type=text] {
-        border: 1px solid gray;
+        border: 1px solid #d1d1d1;
         border-radius: 10px;
         box-sizing: border-box;
         color: #668c7d;
@@ -136,12 +136,12 @@
             <form action="/villagers/<%= @villager.id %>" method="post">
             <input id="hidden" type="hidden" name="_method" value="patch">
                 <div class="container">
-                    * <input type="text" placeholder="<%= @villager.name %>" name="name" required><br>
-                    * <input type="text" placeholder="<%= @villager.personality %>" name="personality" required><br>
-                    * <input type="text" placeholder="<%= @villager.species %>" name="species" required><br>
-                    * <input type="text" placeholder="<%= @villager.birthday %>" name="birthday" required><br>
-                    * <input type="text" placeholder="<%= @villager.catchphrase %>" name="catchphrase" required><br>
-                    * <input type="text" placeholder="<%= @villager.status %>" name="status" required><br>
+                    <input type="text" value="<%= @villager.name %>" name="name"><br>
+                    <input type="text" value="<%= @villager.personality %>" name="personality"><br>
+                    <input type="text" value="<%= @villager.species %>" name="species"><br>
+                    <input type="text" value="<%= @villager.birthday %>" name="birthday"><br>
+                    <input type="text" value="<%= @villager.catchphrase %>" name="catchphrase"><br>
+                    <input type="text" value="<%= @villager.status %>" name="status"><br>
 
                     <button type="submit"><b>Update</b></button>
                 </div>

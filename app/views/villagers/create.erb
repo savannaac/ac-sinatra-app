@@ -4,7 +4,7 @@
         color: #324a40;
         font-family: arial, sans-serif; 
         font-size: 50px;
-        margin-bottom: -10px;
+        margin-bottom: -15px;
         padding-top: 6px;
     } 
 
@@ -13,7 +13,10 @@
         font-family: arial, sans-serif; 
     }
 
-    body {font-family: Arial, sans-serif}
+    body {
+        color: #b951c4; 
+        font-family: Arial, sans-serif
+    }
 
     form {
         background-image:linear-gradient(white, #ebfff7);
@@ -25,11 +28,11 @@
         -moz-box-shadow: inset 0px 0px 15px #f5e79f;
         -webkit-box-shadow: inset 0px 0px 15px #f5e79f;
         height: 400px;
-        width: 500px;
+        width: 400px;
     }
 
     input[type=text] {
-        border: 1px solid gray;
+        border: 1px solid #d1d1d1;
         border-radius: 10px;
         box-sizing: border-box;
         color: #668c7d;
@@ -38,6 +41,20 @@
         padding: 12px 20px;
         text-align: left;
         font-size: 12.5px;
+        width: 45%;
+    }
+
+    .select {
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #668c7d;
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 12.5px;
+        margin: 3px 0;
+        padding: 12px 20px;
+        text-align: left;
         width: 45%;
     }
 
@@ -75,7 +92,7 @@
         padding: 10px 15px;
         text-align: center;
         text-transform: lowercase;
-        width: 10%;
+        width: 11%;
     }
     
     button {
@@ -94,7 +111,7 @@
         padding: 7px 20px;
         text-align: center;
         text-transform: uppercase;
-        width: 25%;
+        width: 30%;
     }
 
     button:hover {
@@ -103,7 +120,7 @@
     }
 
     @keyframes blink { 
-        50% { border-color: #ffcd5f; } 
+        50% { border-color: #ffda8a; } 
     }
 
     .blinking-border:hover {
@@ -111,7 +128,7 @@
     }
 
     .blinking-border {
-        border: 7px solid #9ae2ff;
+        border: 7px solid #9ff5e5;
         height: 99vh;
     }
 </style>
@@ -131,9 +148,40 @@
 
             <form action="/villagers" method="post">
                 <div class="container">
-                    <input type="text" placeholder="name" name="name" required><br>
-                    <input type="text" placeholder="personality" name="personality"><br>
-                    <input type="text" placeholder="species" name="species"><br>
+                    * <input type="text" placeholder="name" name="name" required><br>
+                    <select name="personality" class="select">
+                        <option value="cranky">cranky</option>
+                        <option value="jock">jock</option>
+                        <option value="lazy">lazy</option>
+                        <option value="normal">normal</option>
+                        <option value="peppy">peppy</option>
+                        <option value="sisterly">sisterly</option>
+                        <option value="smug">smug</option>
+                        <option value="snooty">snooty</option>
+                    </select><br>
+                    <select name="species" class="select">
+                        <option value="alligator">alligator</option>
+                        <option value="anteater">anteater</option>
+                        <option value="bear">bear/cub</option>
+                        <option value="bird">bird</option>
+                        <option value="bull">bull</option>
+                        <option value="cat"</option>
+                        <option value="chicken">chicken</option>
+                        <option value="cow">cow</option>
+                        <option value="deer">deer</option>
+                        <option value="dog">dog</option>
+                        <option value="duck">duck</option>
+                        <option value="eagle">eagle</option>
+                        <oprion value="elephant">elephant</option>
+                        <option value="frog">frog</option>
+                        <option value="goat">goat</option>
+                        <option value="gorilla">gorilla</option>
+                        <option value="hamster">hamster</option>
+                        <option value="hippo">hippo</option>
+                        <option value="horse">horse</option>
+                        <option value="kangaroo">kangaroo</option>
+                        <option value=""
+                    </select><br>
                     <input type="text" placeholder="birthday" name="birthday"><br>
                     <input type="text" placeholder="catchphrase" name="catchphrase"><br>
                     <input type="text" placeholder="status" name="status"><br>
