@@ -15,7 +15,7 @@
             <div class="content-container"><br><br><br>
                 <% @villagers.each do |villager| %>
 
-                <p class="content-text"><%= villager.name %>, <%= villager.species %> </p> <button><a href="/villagers/<%=villager.id%>" style="color: #e0fff3;; text-decoration:none;">view</a></button><br>
+                <p class="content-text"><%= villager.name %>, <%= villager.status %> </p> <button><a href="/villagers/<%=villager.id%>" style="color: #e0fff3;; text-decoration:none;">view</a></button><br>
 
                 <% end %>
             </div></center>

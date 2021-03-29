@@ -9,7 +9,7 @@ h1 {
 h2 {
     color: #fff;
     font-family: arial, sans-serif; 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .content-container {
@@ -51,7 +51,7 @@ h2 {
     margin-left: -15px;
     padding: 10px 20px;
     text-align: left;
-    width: 40%;
+    width: 60%;
 }
 
 .container {
@@ -88,14 +88,14 @@ h2 {
  }
 
 button {
-    background-color: #77b9c9;
-    border: 1px solid #61a7b8;
+    background-color: #f7c54f;
+    border: 1px solid #d99904;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    box-shadow: -0px -1px 2px #70bccf;
-    -moz-box-shadow:-0px -1px 2px #70bccf;
-    -webkit-box-shadow:-0px -1px 2px #70bccf;
+    box-shadow: -0px -1px 2px #fcb714;
+    -moz-box-shadow:-0px -1px 2px #fcb714;
+    -webkit-box-shadow:-0px -1px 2px #fcb714;
     font: arial;
     font-size: 14px;
     margin: 5px 0;
@@ -105,7 +105,7 @@ button {
 }
 
 button:hover {
-   background-image: linear-gradient(#82c8d9, #fff);
+   background-image: linear-gradient(#f7c54f, #fff);
 }
 
 @keyframes blink { 

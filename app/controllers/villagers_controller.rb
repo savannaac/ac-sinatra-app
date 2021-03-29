@@ -21,8 +21,7 @@ class VillagersController < ApplicationController
     end
 
     post "/villagers" do
-        villager = Villager.new(:name => params[:name], :personality => params[:personality], :species => params[:species], :birthday => params[:birthday], :catchphrase => params[:catchphrase], :status => params[:status])
-        villager.save
+        @villager = Villager.create(:name => params[:name], :personality => params[:personality], :species => params[:species], :birthday => params[:birthday], :catchphrase => params[:catchphrase], :status => params[:status])
 
         redirect "/villagers/#{@villager.id}"
     end
