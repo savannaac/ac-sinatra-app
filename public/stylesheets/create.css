@@ -17,7 +17,19 @@ body {
 }
 
 form {
-    background-image:linear-gradient(white, #ebfff7);
+    background-color: #edffff;
+    background-image:linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
+        linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
+        linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
+        linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),
+        linear-gradient(175deg, rgba(0,0,0,0) 85%, #c5a68e 85%),
+        linear-gradient( 85deg, rgba(0,0,0,0) 89%, #c5a68e 89%),
+        linear-gradient(175deg, rgba(0,0,0,0) 80%, #ba9499 80%),
+        linear-gradient( 85deg, rgba(0,0,0,0) 86%, #ba9499 86%),
+        linear-gradient(175deg, rgba(0,0,0,0) 75%, #9f8fa4 75%),
+        linear-gradient( 85deg, rgba(0,0,0,0) 83%, #9f8fa4 83%),
+        linear-gradient(175deg, rgba(0,0,0,0) 70%, #74a6ae 70%),
+        linear-gradient( 85deg, rgba(0,0,0,0) 80%, #74a6ae 80%);
     border: 3px solid #77b59c;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -25,7 +37,7 @@ form {
     box-shadow: inset 0px 0px 15px #f5e79f;
     -moz-box-shadow: inset 0px 0px 15px #f5e79f;
     -webkit-box-shadow: inset 0px 0px 15px #f5e79f;
-    height: 400px;
+    height: 460px;
     width: 400px;
 }
 
@@ -94,14 +106,14 @@ input[type=text] {
 }
 
 button {
-    background-color: #7dc9ab;
-    border: 1px solid #6cad93;
+    background-color: #f7c54f;
+    border: 1px solid #d99904;;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    box-shadow: -0px -1px 2px #77bfa2;
-    -moz-box-shadow:-0px -1px 2px #77bfa2;
-    -webkit-box-shadow:-0px -1px 2px #77bfa2;
+    box-shadow: -0px -1px 2px #fcb714;
+    -moz-box-shadow:-0px -1px 2px #fcb714;
+    -webkit-box-shadow:-0px -1px 2px #fcb714;
     color: #e0fff3;
     font: arial;
     font-size: 16px;

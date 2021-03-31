@@ -2,12 +2,13 @@ h1 {
     color: #ffc105;
     font-family: arial black, sans-serif; 
     font-size: 50px;
+    margin-top: -5px;
     margin-bottom: -10px;
     padding-top: 5px;
 } 
 
 h2 {
-    color: #fff;
+    color: #77b59c;
     font-family: arial, sans-serif; 
 }
 
@@ -64,7 +65,7 @@ color: gray;
 
 .image_container {
     text-align: center;
-    margin: 40px 0 30px 0;
+    margin: 40px 0 -40px 0;
 }
 
 @keyframes blink { 

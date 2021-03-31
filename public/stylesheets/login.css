@@ -2,12 +2,13 @@ h1 {
     color: #ffc105;
     font-family: arial black, sans-serif; 
     font-size: 50px;
+    margin-top: -5px;
     margin-bottom: -10px;
     padding-top: 5px;
 } 
 
 h2 {
-    color: #fff;
+    color: #77b59c;
     font-family: arial, sans-serif; 
 }
 
@@ -40,7 +41,7 @@ input[type=email], input[type=password] {
 
 .image_container {
     text-align: center;
-    margin: 50px 0 50px 0;
+    margin: 5px 0 20px 0;
 }
 
 button {

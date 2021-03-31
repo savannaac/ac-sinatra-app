@@ -1,13 +1,15 @@
 h1 { 
-    color: #ffc105;
+    color: #C44BBF;
     font-family: arial black, sans-serif; 
-    font-size: 50px;
+    font-size: 40px;
+    margin-top: -10px;
     margin-bottom: -15px;
     padding-top: 5px;
 } 
 
 h2 {
-    color: #fff;
+    border-bottom: 1px dotted #d1d1d1;
+    color: #77b59c;
     font-family: arial, sans-serif; 
     margin-bottom: 15px;
 }
@@ -80,7 +82,7 @@ h2 {
     padding: 10px 15px;
     text-align: center;
     text-transform: lowercase;
-    width: 10%;
+    width: 12%;
 }
 
 .nav-buttons:hover {

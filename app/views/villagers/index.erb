@@ -4,15 +4,16 @@
 
     <div class="background" style="background-image: url('images/tent-villagers-background.jpeg');">
         <div class="blinking-border">
-            <center><h1><%= @user.name %>'s</h1>
-            <h2 style="font-size: 18px;">villagers</h2>
+            <center><div class ="title">Friend Crossing</div>
 
             <div class="flex-row">
             <button id="button1-home" class="nav-buttons"><a href="/villagers/new" style="color: #fde8ff; font-family: arial black; text-decoration:none;">create</a></button>
                 <button id="button3-logout" class="nav-buttons"><a href="/logout" style="color: #fde8ff; font-family: arial black; text-decoration:none;">sign out</a></button>
             </div>
 
-            <div class="content-container"><br><br><br>
+            <div class="content-container">
+            <h1><%= @user.name %>'s</h1>
+            <h2 style="font-size: 18px;">villagers</h2>
                 <% @villagers.each do |villager| %>
 
                 <p class="content-text"><%= villager.name %>, <%= villager.status %> </p> <button><a href="/villagers/<%=villager.id%>" style="color: #e0fff3;; text-decoration:none;">view</a></button><br>

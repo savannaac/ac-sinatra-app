@@ -63,14 +63,14 @@ h3 {
 }
 
 .nav-buttons {
-    background-color: #98bfd6;
-    border: 2px solid #5c8fad;
+    background-color: #EF74D7;
+    border: 2px solid #C810A3;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    box-shadow: inset -0px -1px 2px #6fadd1;
-    -moz-box-shadow: inset -0px -1px 2px #6fadd1;
-    -webkit-box-shadow: inset -0px -1px 2px #6fadd1;
+    box-shadow: inset -0px -1px 2px #E93DC7;
+    -moz-box-shadow: inset -0px -1px 2px #E93DC7;
+    -webkit-box-shadow: inset -0px -1px 2px #E93DC7;
     font-size: 14px;
     margin: 2px 2px 10px 2px;
     padding: 10px 15px;
