@@ -1,8 +1,7 @@
 class VillagersController < ApplicationController
     get "/villagers" do
         if logged_in?
-            @user = current_user
-            @villagers = Villager.all
+            @villagers = current_user.villagers
 
             erb :"/villagers/index"
         else
@@ -21,7 +20,7 @@ class VillagersController < ApplicationController
     end
 
     post "/villagers" do
-        @villager = Villager.create(:name => params[:name], :personality => params[:personality], :species => params[:species], :birthday => params[:birthday], :catchphrase => params[:catchphrase], :status => params[:status])
+        @villager = Villager.create(:name => params[:name], :personality => params[:personality], :species => params[:species], :birthday => params[:birthday], :catchphrase => params[:catchphrase], :status => params[:status], :user_id => current_user.id)
 
         redirect "/villagers/#{@villager.id}"
     end

@@ -13,3 +13,4 @@ gem "thin"
 gem "bcrypt"
 gem "tux"
 gem "pg", :group => :production
+gem "pry"
