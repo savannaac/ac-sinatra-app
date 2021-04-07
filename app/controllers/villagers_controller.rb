@@ -26,9 +26,11 @@ class VillagersController < ApplicationController
     end
 
     get "/villagers/:id" do
-        if logged_in?
             @user = current_user
             @villager = Villager.find_by_id(params[:id])
+
+        # updated here also
+        if logged_in? && @villager.user_id == current_user.id
             
             erb :"/villagers/show"
         else
@@ -38,13 +40,20 @@ class VillagersController < ApplicationController
 
     get "/villagers/:id/edit" do
         @villager = Villager.find_by_id(params[:id])
-
-        erb :"/villagers/edit"
+        
+        # updated here
+        if @villager.user_id == current_user.id
+            erb :"/villagers/edit"
+        else
+            redirect "/login"
+        end
     end
 
     patch "/villagers/:id" do
         @villager = Villager.find_by_id(params[:id])
 
+        # updated here
+        if @villager.user_id == current_user.id
             @villager.name = params[:name]
             @villager.personality = params[:personality]
             @villager.species = params[:species]
@@ -53,13 +62,22 @@ class VillagersController < ApplicationController
             @villager.status = params[:status]
             @villager.save
 
-        redirect to "/villagers/#{@villager.id}"
+            redirect "/villagers/#{@villager.id}"
+        else
+            redirect "/login"
+        end
     end
 
     delete "/villagers/:id/delete" do
         @villager = Villager.find_by_id(params[:id])
-        @villager.delete
+
+        # updated here
+        if @villager.user_id == current_user.id
+            @villager.delete
         
-        redirect "/villagers"
+            redirect "/villagers"
+        else
+            redirect "/login"
+        end
     end
 end
