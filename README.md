@@ -13,7 +13,7 @@ and add a note about them - whether they're current or have moved, wanted, cute,
 ## Installation 
 Fork the repo & clone to your computer
 
-  `git clone git@github.com:your-github-account/ac-sinatra-app.git`
+  `git clone git@github.com:savannaac/ac-sinatra-app.git`
 
 Enter the folder created by the clone
 
